@@ -17,28 +17,29 @@
   </mat-form-field>
 </div>
 
-<div class="games">
+<div class="games">  
   <ng-container *ngFor="let game of games">
     <div class="game" (click)="openGameDetails(game.id)">
       <div class="game-thumb-container">
         <img
-          *ngIf="game.background_image"
-          src="https://cemhri.org/wp-content/uploads/2018/04/Home-Four-Banner-Background-Image.png"
+         *ngIf="game.background_image"
+          src="{{ game.background_image }}"
           alt="thumbnail"
           class="game-thumbnail"
         />
-        <p *ngIf="!game.background_image">No image</p>
+      <p *ngIf="!game.background_image">No image</p>
       </div>
       <div class="game-description">
         <p class="game-name">{{ game.name }}</p>
         <div class="game-platforms">
           <img
-            *ngFor="let gamePlatform of game.parent_platforms"
+           *ngFor="let gamePlatform of game.parent_platforms"            
             class="game-platform"
-            src="https://lh3.googleusercontent.com/EbXw8rOdYxOGdXEFjgNP8lh-YAuUxwhOAe2jhrz3sgqvPeMac6a6tHvT35V6YMbyNvkZL4R_a2hcYBrtfUhLvhf-N2X3OB9cvH4uMw=w1064-v0"
+            src="assets/platforms/{{ gamePlatform.platform.slug }}.svg"
+            alt="{{ gamePlatform.platform.slug }}"
           />
         </div>
       </div>
     </div>
-  </ng-container>
+  </ng-container> 
 </div>

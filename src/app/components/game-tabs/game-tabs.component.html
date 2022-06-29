@@ -4,20 +4,20 @@
       <p *ngIf="game.parent_platforms?.length" class="game-tabs-par">
         Platforms:
         <span *ngFor="let game of game.parent_platforms; let last = last"
-        >{{ game.platform.name }}<span *ngIf="!last">, </span></span
+          >{{ game.platform.name }}<span *ngIf="!last">, </span></span
         >
       </p>
       <p *ngIf="game.publishers?.length" class="game-tabs-par">
         Publishers:
         <span *ngFor="let publisher of game.publishers; let last = last"
-        >{{ publisher.name }}<span *ngIf="!last">, </span></span
+          >{{ publisher.name }}<span *ngIf="!last">, </span></span
         >
       </p>
       <p *ngIf="game.website" class="game-tabs-par">
         Website:
         <a class="game-tabs-link" href="{{ game.website }}" target="_blank">{{
           game.website
-          }}</a>
+        }}</a>
       </p>
       <div class="game-description" [innerHTML]="game.description"></div>
       <p class="game-tabs-votes">
@@ -37,7 +37,7 @@
       <img
         class="game-screenshot"
         *ngFor="let screenshot of game.screenshots"
-        src="https://lh3.googleusercontent.com/EbXw8rOdYxOGdXEFjgNP8lh-YAuUxwhOAe2jhrz3sgqvPeMac6a6tHvT35V6YMbyNvkZL4R_a2hcYBrtfUhLvhf-N2X3OB9cvH4uMw=w1064-v0"
+        src="{{ screenshot.image }}"
         alt="screenshot"
       />
     </mat-tab>
