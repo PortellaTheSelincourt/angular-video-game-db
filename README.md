@@ -1,5 +1,7 @@
 # NgVideoGameDb
 
+This is a project from here https://www.youtube.com/watch?v=NT5KJGohGyg. Simple tutorial for building an angular project. 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
 
 ## Development server
